@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     browser: true,
+    node: true,
     es2021: true,
   },
   extends: [
@@ -18,6 +19,7 @@ module.exports = {
     'import',
   ],
   rules: {
+    'import/extensions': [0, 'never'],
     'no-console': [0, {
       allow: [
         'warn',
@@ -34,6 +36,10 @@ module.exports = {
       // use <root>/tsconfig.json
       typescript: {
         alwaysTryTypes: true,
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src/'],
       },
     },
   },
