@@ -18,6 +18,13 @@ module.exports = {
     'import',
   ],
   rules: {
+    'no-console': [0, {
+      allow: [
+        'warn',
+        'error',
+        'console',
+      ],
+    }],
   },
   settings: {
     'import/parsers': {
