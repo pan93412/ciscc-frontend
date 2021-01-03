@@ -27,6 +27,6 @@
   "scripts": {
     "build": "webpack",
     "lint": "eslint --fix",
-    "dev": "webpack-dev-server"
+    "dev": "webpack serve"
   }
 }
