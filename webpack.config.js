@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 /* eslint-enable */
 
 module.exports = {
@@ -12,6 +13,9 @@ module.exports = {
 
   plugins: [
     new webpack.ProgressPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    }),
     new MiniCssExtractPlugin({ filename: 'main.[contenthash].css' }),
   ],
 
