@@ -1,4 +1,5 @@
 import generator from "./generator";
+import { complainPlaceholders } from "../consts";
 
 /**
  * Generate complain placeholders.
