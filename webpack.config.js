@@ -17,6 +17,7 @@ module.exports = {
       template: "src/index.html",
     }),
     new MiniCssExtractPlugin({ filename: "main.[contenthash].css" }),
+    new webpack.EnvironmentPlugin(['BACKEND_URL']),
   ],
 
   module: {
