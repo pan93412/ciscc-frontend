@@ -1,8 +1,8 @@
 export interface APISendResponseData {
-  message: string,
+  message: string;
 }
 
 export default interface APISendResponse {
-  success: boolean,
-  data: APISendResponseData,
+  success: boolean;
+  data: APISendResponseData;
 }

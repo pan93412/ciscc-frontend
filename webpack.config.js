@@ -17,7 +17,7 @@ module.exports = {
       template: "src/index.html",
     }),
     new MiniCssExtractPlugin({ filename: "main.[contenthash].css" }),
-    new webpack.EnvironmentPlugin(['BACKEND_URL']),
+    new webpack.EnvironmentPlugin(["BACKEND_URL"]),
   ],
 
   module: {
@@ -30,18 +30,11 @@ module.exports = {
       },
       {
         test: /.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /.s(?:a|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },

@@ -7,5 +7,8 @@ export default function generator<T>(statements: T[]): T {
   // 的長度，這樣數字就放大到 0~slogans 的最大長度。
   // 但是陣列不接受浮點數，所以我再套了一個 Math.round
   // 讓他變成正整數。
-  return statements[Math.round(Math.random() * (statements.length - 1))] || statements[0];
+  return (
+    statements[Math.round(Math.random() * (statements.length - 1))] ||
+    statements[0]
+  );
 }

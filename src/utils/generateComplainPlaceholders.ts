@@ -1,5 +1,4 @@
-import generator from './generator';
-
+import generator from "./generator";
 
 /**
  * Generate complain placeholders.

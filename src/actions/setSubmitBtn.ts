@@ -1,8 +1,11 @@
-import sendMessage from '../utils/sendMessage';
-import ErrorEnums from '../enums/ErrorEnums';
+import sendMessage from "../utils/sendMessage";
+import ErrorEnums from "../enums/ErrorEnums";
 
-const complainArea = <HTMLTextAreaElement>document.querySelector('#complain-area');
-const textareaChecker = (area: HTMLTextAreaElement) => (area && area.value && area.value.length > 0);
+const complainArea = <HTMLTextAreaElement>(
+  document.querySelector("#complain-area")
+);
+const textareaChecker = (area: HTMLTextAreaElement) =>
+  area && area.value && area.value.length > 0;
 const warningMessage = [
   "訊息一旦送出，即無法撤回。\n\n",
   "即使這個系統不會記錄您的 IP 地址，",
@@ -18,7 +21,7 @@ export default function setSubmitBtn() {
     if (confirm(warningMessage)) {
       if (textareaChecker(complainArea)) {
         sendMessage({
-          message: complainArea.value
+          message: complainArea.value,
         }).catch(alert);
       } else {
         throw new Error(ErrorEnums.TEXTAREA_CONTENT_INVAILD);

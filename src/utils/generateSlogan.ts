@@ -1,5 +1,5 @@
-import generator from './generator';
-import { slogans } from '../consts';
+import generator from "./generator";
+import { slogans } from "../consts";
 
 /**
  * Generate slogans automatically.

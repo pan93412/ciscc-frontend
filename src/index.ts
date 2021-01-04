@@ -3,9 +3,9 @@ import "./style/bulma.ts";
 import "./style/custom.ts";
 
 /* Main */
-import setComplainArea from './actions/setComplainArea';
-import setSlogan from './actions/setSlogan';
-import setSubmitBtn from './actions/setSubmitBtn';
+import setComplainArea from "./actions/setComplainArea";
+import setSlogan from "./actions/setSlogan";
+import setSubmitBtn from "./actions/setSubmitBtn";
 
 setComplainArea();
 setSlogan();
