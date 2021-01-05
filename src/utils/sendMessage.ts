@@ -20,12 +20,6 @@ export default async function sendMessage({
 }: Message): Promise<APISendResponse> {
   if (!BACKEND_URL) return;
 
-  console.log(
-    JSON.stringify({
-      message,
-    })
-  );
-
   const resp = await makePostRequest(
     `${BACKEND_URL}/send`,
     JSON.stringify({
@@ -38,7 +32,6 @@ export default async function sendMessage({
   }
 
   const respJson: APISendResponse = await resp.json();
-  console.log(respJson);
   if (!respJson.success) {
     throw new Error(ErrorEnums.API_NOT_SUCCESS);
   }
