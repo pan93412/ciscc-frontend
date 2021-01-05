@@ -9,6 +9,7 @@ export const complainPlaceholders = [
   "馬的koying下次絕對全錯啦再見啦馬上就要追上去啦",
   "WA WA WA WA WA WA WA WA WA WA WA",
   "虫合",
+  "pD又掛了@@",
 ];
 
 export const slogans = [
@@ -16,4 +17,5 @@ export const slogans = [
   "人生很苦，應得發洩。",
   "覺得誰很討厭，就抱怨它。",
   "創造這東西的人是不是很厭世。",
+  "b²-4ac > 0 的根都有伴，但你沒有。",
 ];
