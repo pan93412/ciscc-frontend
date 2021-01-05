@@ -23,7 +23,7 @@
   "private": true,
   "author": "pan93412",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "dev": "webpack serve",
     "lint:check": "prettier -c .",
     "lint": "prettier -w ."
