@@ -20,24 +20,28 @@ export default async function sendMessage({
 }: Message): Promise<APISendResponse> {
   if (!BACKEND_URL) return;
 
-  const resp = await makePostRequest(
-    `${BACKEND_URL}/send`,
-    JSON.stringify({
-      message: messageProcessor(message),
-    })
-  );
+  try {
+    const resp = await makePostRequest(
+      `${BACKEND_URL}/send`,
+      JSON.stringify({
+        message: messageProcessor(message),
+      })
+    );
 
-  if (resp.status === 429) {
-    throw new Error(ErrorEnums.API_RATE_LIMIT);
-  } else if (!resp.ok) {
-    throw new Error(ErrorEnums.HTTP_NOT_OK);
+    if (resp.status === 429) {
+      throw new Error(ErrorEnums.API_RATE_LIMIT);
+    } else if (!resp.ok) {
+      throw new Error(ErrorEnums.HTTP_NOT_OK);
+    }
+  
+    const respJson: APISendResponse = await resp.json();
+    if (!respJson.success) {
+      throw new Error(ErrorEnums.API_NOT_SUCCESS);
+    }
+  
+    console.log(resp.headers);
+    return respJson;
+  } catch (e: any) {
+    throw new Error(ErrorEnums.FETCH_ERROR + e);
   }
-
-  const respJson: APISendResponse = await resp.json();
-  if (!respJson.success) {
-    throw new Error(ErrorEnums.API_NOT_SUCCESS);
-  }
-
-  console.log(resp.headers);
-  return respJson;
 }
