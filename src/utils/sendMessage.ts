@@ -27,7 +27,9 @@ export default async function sendMessage({
     })
   );
 
-  if (!resp.ok) {
+  if (resp.status === 429) {
+    throw new Error(ErrorEnums.API_RATE_LIMIT);
+  } else if (!resp.ok) {
     throw new Error(ErrorEnums.HTTP_NOT_OK);
   }
 
@@ -36,5 +38,6 @@ export default async function sendMessage({
     throw new Error(ErrorEnums.API_NOT_SUCCESS);
   }
 
+  console.log(resp.headers);
   return respJson;
 }
