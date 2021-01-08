@@ -17,12 +17,16 @@ export default function setSubmitBtn() {
   // #submit, a button.
   const submitBtn = <HTMLButtonElement>document.querySelector("#submit");
   submitBtn.disabled = false;
-  submitBtn.addEventListener("click", () => {
+  submitBtn.addEventListener("click", async (e) => {
+    const el = <HTMLButtonElement>(e.currentTarget)
+
     if (confirm(warningMessage)) {
       if (textareaChecker(complainArea)) {
-        sendMessage({
+        el.disabled = true;
+        await sendMessage({
           message: complainArea.value,
         }).catch(alert);
+        el.disabled = false;
       } else {
         throw new Error(ErrorEnums.TEXTAREA_CONTENT_INVAILD);
       }
