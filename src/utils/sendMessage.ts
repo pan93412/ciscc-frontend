@@ -6,15 +6,6 @@ import APISendResponse from "../types/APISendResponse";
 // It will be provided by webpack.EnvironmentPlugin.
 const BACKEND_URL = process.env.BACKEND_URL;
 
-export function messageProcessor(message: string): string {
-  let msgBuf = message;
-
-  msgBuf = msgBuf.trim();
-  msgBuf = (msgBuf[0] == ">" ? "\n" : "") + msgBuf;
-
-  return msgBuf;
-}
-
 export default async function sendMessage({
   message,
 }: Message): Promise<APISendResponse> {
@@ -24,7 +15,7 @@ export default async function sendMessage({
     const resp = await makePostRequest(
       `${BACKEND_URL}/send`,
       JSON.stringify({
-        message: messageProcessor(message),
+        message,
       })
     );
 
