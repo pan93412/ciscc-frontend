@@ -8,9 +8,8 @@ const textareaChecker = (area: HTMLTextAreaElement) =>
   area && area.value && area.value.length > 0;
 const warningMessage = [
   "訊息一旦送出，即無法撤回。\n\n",
-  "即使這個系統不會記錄您的 IP 地址，",
-  "但言語所帶來的傷害是無法估計的。",
-  "請謹言慎行。",
+  "如管理員或執法單位要求調出訊息傳送記錄，",
+  "本服務會有條件提供。請謹言慎行。",
 ].join("");
 
 export default function setSubmitBtn() {
