@@ -17,7 +17,7 @@
     "webpack-dev-server": "^3.11.1"
   },
   "name": "ciscc-frontend",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
