@@ -10,6 +10,7 @@ export const complainPlaceholders = [
   "WA WA WA WA WA WA WA WA WA WA WA",
   "虫合",
   "pD又掛了@@",
+  "To be or not to be, the answer is C.",
 ];
 
 export const slogans = [
