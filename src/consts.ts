@@ -11,7 +11,7 @@ export const complainPlaceholders = [
   "虫合",
   "pD又掛了@@",
   "To be or not to be, the answer is C.", // thanks to LittleCute8152
-  "我也想成為電神QWQ",
+  "我也想成為電神QWQ", // thanks to linyize
 ];
 
 export const slogans = [
