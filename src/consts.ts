@@ -10,6 +10,8 @@ export const complainPlaceholders = [
   "WA WA WA WA WA WA WA WA WA WA WA",
   "虫合",
   "pD又掛了@@",
+  "To be or not to be, the answer is C.", // thanks to LittleCute8152
+  "我也想成為電神QWQ", // thanks to linyize
 ];
 
 export const slogans = [
@@ -18,4 +20,6 @@ export const slogans = [
   "覺得誰很討厭，就抱怨它。",
   "創造這東西的人是不是很厭世。",
   "b²-4ac > 0 的根都有伴，但你沒有。",
+  "不見棺材不掉淚 莫調IP才收斂", // thanks to linyize
+  "很多時候，要靠北的不是別人，而是自己......", // thanks to linyize
 ];
